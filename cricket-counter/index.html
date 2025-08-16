@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cricket Counter - Professional cricket scoring app for iPhone and Apple Watch. Real-time sync, wickets-on-extras, 24-level undo system.">
+    <meta name="keywords" content="cricket counter, cricket scoring, cricket app, iPhone, Apple Watch, umpire, cricket match">
+    <meta name="author" content="Made by Kav">
+    <title>Cricket Counter - Professional Cricket Scoring App</title>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cricket Counter - Professional Cricket Scoring App">
+    <meta property="og:description" content="Professional cricket scoring app for iPhone and Apple Watch with real-time sync and advanced features.">
+    <meta property="og:url" content="https://madebykav.com/cricket-counter/">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="../assets/logo-small.png" alt="Made by Kav Logo" class="logo-icon">
+                    <span class="logo-text">Made by Kav</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#" class="active">Cricket Counter</a></li>
+                        <li><a href="/support/">Support</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Breadcrumb -->
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><span>Cricket Counter</span></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- App Hero Section -->
+        <section class="app-hero">
+            <div class="container">
+                <div class="app-hero-content">
+                    <div class="app-hero-text">
+                        <div class="app-badge">
+                            <span class="badge-text">📱 iOS App</span>
+                        </div>
+                        <h1>Cricket Counter</h1>
+                        <p class="app-tagline">Professional cricket scoring for umpires, coaches, and enthusiasts</p>
+                        <p class="app-description">The most comprehensive cricket scoring app designed for the modern game. Features seamless iPhone and Apple Watch synchronization, advanced wickets-on-extras tracking, and a 24-level undo system that preserves complete game state.</p>
+                        
+                        <div class="app-hero-actions">
+                            <a href="#" class="download-button primary">
+                                <div class="download-content">
+                                    <span class="download-icon">📱</span>
+                                    <div class="download-text">
+                                        <span class="download-label">Download on the</span>
+                                        <span class="download-store">App Store</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/cricket-counter/support/" class="cta-button secondary">View Support</a>
+                        </div>
+                        
+                        <div class="app-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">iPhone</span>
+                                <span class="stat-label">Primary Platform</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">⌚ Watch</span>
+                                <span class="stat-label">Companion App</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24-Level</span>
+                                <span class="stat-label">Undo System</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="app-hero-visual">
+                        <div class="device-showcase">
+                            <!-- iPhone mockup -->
+                            <div class="device-mockup iphone">
+                                <div class="device-frame">
+                                    <div class="device-screen">
+                                        <div class="app-interface">
+                                            <div class="app-header">
+                                                <div class="status-bar"></div>
+                                            </div>
+                                            <div class="scoring-display">
+                                                <div class="over-display">4.3</div>
+                                                <div class="delivery-history">
+                                                    <div class="delivery-row">
+                                                        <div class="delivery-icon cricket-ball"></div>
+                                                        <div class="delivery-icon cricket-ball"></div>
+                                                        <div class="delivery-icon wide-ball">W</div>
+                                                        <div class="delivery-icon cricket-ball"></div>
+                                                    </div>
+                                                    <div class="wicket-indicators">
+                                                        <div class="wicket-dot"></div>
+                                                        <div class="wicket-dot"></div>
+                                                        <div class="wicket-dot active">W</div>
+                                                        <div class="wicket-dot"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="control-buttons">
+                                                <div class="button-row">
+                                                    <div class="control-btn">Wide</div>
+                                                    <div class="control-btn">5</div>
+                                                </div>
+                                                <div class="button-row">
+                                                    <div class="control-btn">No Ball</div>
+                                                    <div class="control-btn">+ Wicket</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Apple Watch mockup -->
+                            <div class="device-mockup apple-watch">
+                                <div class="watch-frame">
+                                    <div class="watch-screen">
+                                        <div class="watch-interface">
+                                            <div class="watch-crown"></div>
+                                            <div class="watch-content">
+                                                <div class="watch-over">4.3</div>
+                                                <div class="watch-balls">
+                                                    <div class="watch-ball"></div>
+                                                    <div class="watch-ball"></div>
+                                                    <div class="watch-ball wide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Designed for the Modern Game</h2>
+                    <p>Every feature crafted with professional cricket scoring in mind</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>iPhone Primary</h3>
+                        <p>Full-featured interface optimized for cricket scoring with large, clear buttons and comprehensive delivery tracking perfect for match situations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⌚</div>
+                        <h3>Apple Watch Companion</h3>
+                        <p>Complete functionality on your wrist with crown navigation and haptic feedback. Never miss an action while keeping your eyes on the game.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Real-time Sync</h3>
+                        <p>Seamless synchronization between iPhone and Apple Watch ensures your data is always up to date across both devices.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🏏</div>
+                        <h3>Wickets-on-Extras</h3>
+                        <p>Long-press gestures for recording wickets on wide balls and no-balls, exactly as it happens in real cricket matches.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">↩️</div>
+                        <h3>24-Level Undo/Redo</h3>
+                        <p>Comprehensive undo system preserves complete game state including overs, balls, wickets, and delivery history. Mistakes are easily correctable.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Visual Delivery History</h3>
+                        <p>Cricket ball icons and clear indicators show your match progress at a glance. Every delivery is tracked and displayed beautifully.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simple. Powerful. Professional.</h2>
+                    <p>Designed for umpires who demand precision and reliability</p>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Set Your Match</h3>
+                        <p>Choose your match format and number of overs. Supports any format from T20 to unlimited overs matches.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Start Scoring</h3>
+                        <p>Tap the main area for legal deliveries, use dedicated buttons for extras, and long-press for wickets-on-extras.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Track Everything</h3>
+                        <p>Visual delivery history, automatic over tracking, and complete match statistics. Everything you need in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section">
+            <div class="container">
+                <div class="download-content">
+                    <div class="download-text">
+                        <h2>Ready to Transform Your Cricket Scoring?</h2>
+                        <p>Join umpires and cricket enthusiasts who trust Cricket Counter for professional match scoring.</p>
+                        
+                        <div class="download-features">
+                            <div class="download-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Free trial with all features</span>
+                            </div>
+                            <div class="download-feature">
+                                <span class="feature-check">✓</span>
+                                <span>iPhone and Apple Watch sync</span>
+                            </div>
+                            <div class="download-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Professional cricket scoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="download-actions">
+                        <a href="#" class="download-button-large">
+                            <div class="download-content-large">
+                                <span class="download-icon-large">📱</span>
+                                <div class="download-text-large">
+                                    <span class="download-label-large">Download on the</span>
+                                    <span class="download-store-large">App Store</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <div class="download-info">
+                            <p><strong>System Requirements:</strong></p>
+                            <p>iOS 17.0+, iPhone 12 or newer<br>
+                            watchOS 10.0+, Apple Watch Series 4+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="contact" class="support-section">
+            <div class="container">
+                <div class="support-content">
+                    <div class="support-text">
+                        <h2>Need Help or Have Questions?</h2>
+                        <p>Our support team is here to help you get the most out of Cricket Counter.</p>
+                    </div>
+                    
+                    <div class="support-links">
+                        <a href="/cricket-counter/support/" class="support-card">
+                            <div class="support-icon">📚</div>
+                            <div class="support-details">
+                                <h3>Documentation</h3>
+                                <p>Complete guides and FAQs</p>
+                            </div>
+                        </a>
+                        
+                        <a href="/cricket-counter/support/#contact" class="support-card">
+                            <div class="support-icon">📧</div>
+                            <div class="support-details">
+                                <h3>Email Support</h3>
+                                <p>app_support@madebykav.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="/cricket-counter/privacy.html" class="support-card">
+                            <div class="support-icon">🔒</div>
+                            <div class="support-details">
+                                <h3>Privacy Policy</h3>
+                                <p>Your data protection</p>
+                            </div>
+                        </a>
+                        
+                        <a href="/cricket-counter/terms.html" class="support-card">
+                            <div class="support-icon">📄</div>
+                            <div class="support-details">
+                                <h3>Terms of Use</h3>
+                                <p>App usage terms</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cricket Counter</h4>
+                    <p>Professional cricket scoring for the modern game.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="/cricket-counter/">Features</a></li>
+                        <li><a href="/cricket-counter/support/">Support</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/cricket-counter/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/cricket-counter/terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Made by Kav</h4>
+                    <ul>
+                        <li><a href="/">More Apps</a></li>
+                        <li><a href="mailto:app_support@madebykav.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Made by Kav. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = navMenu.classList.contains('nav-open');
+                
+                navMenu.classList.toggle('nav-open');
+                mobileMenuToggle.classList.toggle('menu-open');
+                mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+                document.body.classList.toggle('menu-open', !isExpanded);
+            });
+            
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('nav-open');
+                    mobileMenuToggle.classList.remove('menu-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    navMenu.classList.remove('nav-open');
+                    mobileMenuToggle.classList.remove('menu-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
