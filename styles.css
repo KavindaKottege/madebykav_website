@@ -978,7 +978,8 @@ nav a {
 
 /* GPU acceleration for smooth transforms */
 .device-mockup,
-.plastic-clicker,
+.manual-cricket-counter,
+.modern-device-showcase,
 .phone-mockup,
 .vs-circle,
 .comparison-icon {
@@ -2664,57 +2665,387 @@ nav a {
   border-color: rgba(76, 201, 240, 0.2);
 }
 
-/* Plastic Clicker Visual */
-.plastic-clicker {
-  width: 120px;
-  height: 80px;
-  background: linear-gradient(145deg, #444, #222);
-  border-radius: 8px;
+/* Manual Cricket Counter Visual */
+.manual-cricket-counter {
+  width: 140px;
   margin: 0 auto 1rem;
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  filter: grayscale(20%);
 }
 
-.clicker-display {
+.counter-body {
+  background: linear-gradient(145deg, #f5f5f5 0%, #e8e8e8 50%, #d5d5d5 100%);
+  border: 2px solid #c0c0c0;
+  border-radius: 25px;
+  padding: 1.5rem 1rem;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.counter-brand {
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #8B0000;
+  background: linear-gradient(135deg, #DC143C, #8B0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.dial-section {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dial-section:last-child {
+  margin-bottom: 0;
+}
+
+.dial-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.03em;
+}
+
+.dial-wheel {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: 2px solid #444;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.dial-wheel.double {
+  width: 45px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.dial-wheel.double::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: #666;
+  transform: translateX(-50%);
+}
+
+.dial-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  position: relative;
+}
+
+.dial-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+
+.dial-number.active {
+  opacity: 1;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle rotation animation for mechanical feel */
+@keyframes dial-tick {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.dial-wheel:hover {
+  animation: dial-tick 0.3s ease-in-out;
+}
+
+/* Modern Device Showcase */
+.modern-device-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iphone-mockup {
+  position: relative;
+}
+
+.device-frame {
+  width: 120px;
+  height: 240px;
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border: 3px solid #333;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 
+    0 8px 25px rgba(76, 201, 240, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.device-frame::before {
+  content: '';
   position: absolute;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #111;
-  color: #0f0;
-  font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  border: 1px solid #333;
+  width: 35px;
+  height: 3px;
+  background: #444;
+  border-radius: 2px;
+  z-index: 1;
 }
 
-.clicker-buttons {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
 }
 
-.clicker-btn {
-  width: 25px;
+.status-bar {
   height: 25px;
-  background: #666;
+  background: linear-gradient(135deg, #111, #000);
+  border-bottom: 1px solid #222;
+}
+
+.app-content {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  height: calc(100% - 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.over-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.over-subtitle {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.delivery-history {
+  margin-bottom: 1rem;
+}
+
+.delivery-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.delivery-ball {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff4757, #c44569);
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.delivery-extra {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--warning-color);
+  background: transparent;
+  color: var(--warning-color);
+  font-size: 0.4rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #ccc;
-  border: 2px solid #777;
+  line-height: 1;
 }
 
-/* Modern Phone Visual */
+.delivery-extra.no-ball {
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+}
+
+.wicket-indicator {
+  width: 16px;
+  height: 16px;
+  background: var(--success-color);
+  border-radius: 3px;
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.control-area {
+  margin-top: auto;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.control-button {
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.control-button.extras {
+  background: var(--warning-color);
+  color: #000;
+}
+
+.control-button.wicket {
+  background: var(--success-color);
+  color: #000;
+}
+
+/* Apple Watch Mockup */
+.watch-mockup {
+  position: relative;
+}
+
+.watch-frame {
+  width: 70px;
+  height: 85px;
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 
+    0 4px 15px rgba(76, 201, 240, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.watch-frame::before {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 20px;
+  width: 3px;
+  height: 25px;
+  background: #444;
+  border-radius: 0 2px 2px 0;
+}
+
+.watch-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.watch-content {
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.watch-score {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.watch-delivery-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.watch-ball {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff4757, #c44569);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.watch-extra {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--warning-color);
+  background: transparent;
+  color: var(--warning-color);
+  font-size: 0.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.watch-wicket {
+  width: 10px;
+  height: 10px;
+  background: var(--success-color);
+  border-radius: 2px;
+  color: #000;
+  font-size: 0.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Legacy phone mockup - keeping for compatibility */
 .phone-mockup {
   width: 100px;
   height: 180px;
@@ -3382,9 +3713,46 @@ nav a {
     padding: 2rem 1.5rem;
   }
   
-  .plastic-clicker {
+  .manual-cricket-counter {
+    width: 120px;
+  }
+  
+  .counter-body {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .dial-wheel {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .dial-wheel.double {
+    width: 38px;
+    height: 28px;
+  }
+  
+  .modern-device-showcase {
+    gap: 1rem;
+  }
+  
+  .device-frame {
     width: 100px;
-    height: 70px;
+    height: 200px;
+    padding: 8px;
+  }
+  
+  .watch-frame {
+    width: 60px;
+    height: 75px;
+    padding: 6px;
+  }
+  
+  .over-score {
+    font-size: 2rem;
+  }
+  
+  .watch-score {
+    font-size: 1.2rem;
   }
   
   .phone-mockup {
@@ -3557,21 +3925,61 @@ nav a {
     margin-top: 1rem;
   }
   
-  .plastic-clicker {
-    width: 90px;
-    height: 65px;
+  .manual-cricket-counter {
+    width: 100px;
     margin-bottom: 0.75rem;
   }
   
-  .clicker-display {
-    font-size: 1rem;
-    padding: 0.2rem 0.5rem;
+  .counter-body {
+    padding: 1rem 0.5rem;
   }
   
-  .clicker-btn {
-    width: 20px;
-    height: 20px;
-    font-size: 0.7rem;
+  .counter-brand {
+    font-size: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .dial-label {
+    font-size: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .dial-wheel {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .dial-wheel.double {
+    width: 32px;
+    height: 24px;
+  }
+  
+  .dial-number {
+    font-size: 0.6rem;
+  }
+  
+  .modern-device-showcase {
+    gap: 0.75rem;
+  }
+  
+  .device-frame {
+    width: 85px;
+    height: 170px;
+    padding: 6px;
+  }
+  
+  .watch-frame {
+    width: 50px;
+    height: 65px;
+    padding: 5px;
+  }
+  
+  .over-score {
+    font-size: 1.75rem;
+  }
+  
+  .watch-score {
+    font-size: 1rem;
   }
   
   .phone-mockup {

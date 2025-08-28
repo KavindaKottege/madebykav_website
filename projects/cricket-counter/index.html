@@ -210,7 +210,7 @@
         <section class="comparison-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Upgrade from Plastic Clickers?</h2>
+                    <h2>Why upgrade from a $20 plastic clicker?</h2>
                     <p>See the difference modern technology makes in cricket scoring</p>
                 </div>
                 
@@ -226,39 +226,65 @@
                         <div class="comparison-points">
                             <div class="comparison-point negative">
                                 <div class="point-icon">❌</div>
-                                <span>Manual counting (error-prone)</span>
+                                <span>Manual dials for balls, overs, and wickets</span>
                             </div>
                             
                             <div class="comparison-point negative">
                                 <div class="point-icon">❌</div>
-                                <span>No delivery history</span>
+                                <span>Easy to forget if you ticked an over or ball</span>
                             </div>
                             
                             <div class="comparison-point negative">
                                 <div class="point-icon">❌</div>
-                                <span>No sync between devices</span>
+                                <span>No way to track extras like wides or no-balls</span>
                             </div>
                             
                             <div class="comparison-point negative">
                                 <div class="point-icon">❌</div>
-                                <span>Easy to lose count</span>
+                                <span>No history to double-check with scorers</span>
                             </div>
                             
                             <div class="comparison-point negative">
                                 <div class="point-icon">❌</div>
-                                <span>No undo functionality</span>
+                                <span>No sync or backup if you lose count</span>
                             </div>
                         </div>
                         
                         <div class="comparison-visual old-device">
-                            <div class="plastic-clicker">
-                                <div class="clicker-display">23</div>
-                                <div class="clicker-buttons">
-                                    <div class="clicker-btn">+</div>
-                                    <div class="clicker-btn">-</div>
+                            <div class="manual-cricket-counter">
+                                <div class="counter-body">
+                                    <div class="counter-brand">GRAY-NICOLLS</div>
+                                    <div class="dial-section balls-section">
+                                        <div class="dial-label">BALLS</div>
+                                        <div class="dial-wheel">
+                                            <div class="dial-numbers">
+                                                <span class="dial-number active">0</span>
+                                                <span class="dial-number">1</span>
+                                                <span class="dial-number">2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dial-section overs-section">
+                                        <div class="dial-label">OVERS</div>
+                                        <div class="dial-wheel double">
+                                            <div class="dial-numbers">
+                                                <span class="dial-number">0</span>
+                                                <span class="dial-number active">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dial-section wickets-section">
+                                        <div class="dial-label">WICKETS</div>
+                                        <div class="dial-wheel">
+                                            <div class="dial-numbers">
+                                                <span class="dial-number active">0</span>
+                                                <span class="dial-number">1</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="device-label">$20 plastic device</p>
+                            <p class="device-label">$20 plastic device with manual dials</p>
                         </div>
                     </div>
                     
@@ -279,55 +305,94 @@
                         <div class="comparison-points">
                             <div class="comparison-point positive">
                                 <div class="point-icon">✅</div>
-                                <span>Automatic tracking (accurate)</span>
+                                <span>Automatic tracking – overs tick over, wickets update, and extras are logged</span>
                             </div>
                             
                             <div class="comparison-point positive">
                                 <div class="point-icon">✅</div>
-                                <span>Complete delivery history</span>
+                                <span>Delivery history – see every ball, wide, and no-ball in order</span>
                             </div>
                             
                             <div class="comparison-point positive">
                                 <div class="point-icon">✅</div>
-                                <span>iPhone + Apple Watch sync</span>
+                                <span>Undo mistakes instantly – fix an error with a single tap</span>
                             </div>
                             
                             <div class="comparison-point positive">
                                 <div class="point-icon">✅</div>
-                                <span>Never lose your place</span>
+                                <span>Custom innings – limited overs, unlimited, or start mid-innings</span>
                             </div>
                             
                             <div class="comparison-point positive">
                                 <div class="point-icon">✅</div>
-                                <span>Instant undo/redo</span>
+                                <span>Seamless sync – score from your iPhone or Apple Watch, perfectly in sync</span>
+                            </div>
+                            
+                            <div class="comparison-point positive">
+                                <div class="point-icon">✅</div>
+                                <span>Modern, clean design – big buttons, clear visuals, haptic feedback for confidence</span>
                             </div>
                         </div>
                         
                         <div class="comparison-visual modern-device">
-                            <div class="phone-mockup">
-                                <div class="phone-screen">
-                                    <div class="app-display">
-                                        <div class="score-display">4.3</div>
-                                        <div class="delivery-dots">
-                                            <div class="dot active"></div>
-                                            <div class="dot active"></div>
-                                            <div class="dot wide">W</div>
-                                            <div class="dot"></div>
+                            <div class="modern-device-showcase">
+                                <div class="iphone-mockup">
+                                    <div class="device-frame">
+                                        <div class="device-screen">
+                                            <div class="status-bar"></div>
+                                            <div class="app-content">
+                                                <div class="over-score">13.4</div>
+                                                <div class="over-subtitle">This Over</div>
+                                                <div class="delivery-history">
+                                                    <div class="delivery-row">
+                                                        <div class="delivery-ball cricket-ball"></div>
+                                                        <div class="delivery-ball cricket-ball"></div>
+                                                        <div class="delivery-ball cricket-ball"></div>
+                                                        <div class="delivery-extra wide">W</div>
+                                                        <div class="delivery-ball cricket-ball"></div>
+                                                        <div class="delivery-extra no-ball">NB</div>
+                                                    </div>
+                                                    <div class="wicket-indicator">W</div>
+                                                </div>
+                                                <div class="control-area">
+                                                    <div class="button-group">
+                                                        <div class="control-button extras">Wide</div>
+                                                        <div class="control-button wicket">+ Wicket</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="watch-mockup">
+                                    <div class="watch-frame">
+                                        <div class="watch-screen">
+                                            <div class="watch-content">
+                                                <div class="watch-score">0.4</div>
+                                                <div class="watch-delivery-row">
+                                                    <div class="watch-ball"></div>
+                                                    <div class="watch-ball"></div>
+                                                    <div class="watch-ball"></div>
+                                                    <div class="watch-extra">W</div>
+                                                    <div class="watch-ball"></div>
+                                                </div>
+                                                <div class="watch-wicket">W</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="device-label">Free with your iPhone</p>
+                            <p class="device-label">iPhone + Apple Watch companion</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="comparison-cta">
-                    <h4>Make the Smart Choice</h4>
-                    <p>Join professional umpires who've already upgraded to modern cricket scoring</p>
+                    <h4>Upgrade your umpiring</h4>
+                    <p>Download free today and see why so many umpires have made the switch.</p>
                     <a href="https://apps.apple.com/au/app/cricket-umpiring-counter/id6749366228" class="upgrade-btn" aria-label="Download Cricket Counter from the App Store">
                         <span class="upgrade-icon" aria-hidden="true">⚡</span>
-                        Upgrade to Cricket Counter
+                        Download Free Today
                     </a>
                 </div>
             </div>
