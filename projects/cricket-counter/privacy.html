@@ -75,6 +75,7 @@
                         <ul>
                             <li><strong>Device Information:</strong> iOS/watchOS version, device model, app version for compatibility and troubleshooting</li>
                             <li><strong>Usage Analytics:</strong> App launch frequency, feature usage patterns, and crash reports (only if you opt-in via iOS settings)</li>
+                            <li><strong>Advertising Identifier:</strong> Device advertising ID for personalized ads in the free version (can be limited in iOS settings)</li>
                             <li><strong>Session Data:</strong> App launch timestamps for determining whether to resume matches or start fresh</li>
                         </ul>
 
@@ -99,7 +100,14 @@
                             <li><strong>Data Persistence:</strong> Save your match progress locally on your devices and restore it when you reopen the app</li>
                         </ul>
 
-                        <h3>2.2 App Improvement</h3>
+                        <h3>2.2 Advertising (Free Version Only)</h3>
+                        <ul>
+                            <li><strong>Ad Display:</strong> Show relevant advertisements through Google AdMob in the free version</li>
+                            <li><strong>Ad Personalization:</strong> Use advertising ID to show more relevant ads (can be disabled in iOS settings)</li>
+                            <li><strong>Ad Performance:</strong> Track anonymous ad interaction data to improve ad relevance</li>
+                        </ul>
+
+                        <h3>2.3 App Improvement</h3>
                         <ul>
                             <li><strong>Bug Fixes:</strong> Identify and resolve technical issues using crash reports and error logs</li>
                             <li><strong>Feature Development:</strong> Understand which features are most valuable to users to guide future updates</li>
@@ -173,6 +181,8 @@
                             <li><strong>iCloud Sync:</strong> Disable in iOS Settings > [Your Name] > iCloud > Cricket Counter</li>
                             <li><strong>Analytics:</strong> Control app analytics in iOS Settings > Privacy & Security > Analytics & Improvements</li>
                             <li><strong>Crash Reports:</strong> Disable automatic sharing in iOS Settings > Privacy & Security > Analytics & Improvements</li>
+                            <li><strong>Ad Personalization:</strong> Limit ad tracking in iOS Settings > Privacy & Security > Apple Advertising > Personalized Ads (Off)</li>
+                            <li><strong>Premium Subscription:</strong> Subscribe to Premium within the app to completely remove all advertisements</li>
                         </ul>
 
                         <h3>5.3 Data Portability</h3>
@@ -262,8 +272,18 @@
                             <li><strong>App Store:</strong> For app distribution and updates</li>
                         </ul>
 
-                        <h3>10.2 No Other Third Parties</h3>
-                        <p>Cricket Counter does not integrate with any other third-party services, analytics platforms, advertising networks, or social media platforms. We believe in keeping your cricket scoring data private and secure.</p>
+                        <h3>10.2 Google AdMob Integration</h3>
+                        <p>Cricket Counter integrates with Google AdMob to display advertisements in the free version of our app:</p>
+                        <ul>
+                            <li><strong>Ad Display:</strong> Google AdMob serves banner and interstitial advertisements</li>
+                            <li><strong>Advertising ID:</strong> AdMob may collect your device's advertising identifier for ad personalization</li>
+                            <li><strong>Ad Performance Data:</strong> Anonymous data about ad impressions, clicks, and interactions</li>
+                            <li><strong>Google's Privacy Policy:</strong> AdMob data collection is governed by Google's Privacy Policy</li>
+                            <li><strong>Premium Option:</strong> Subscribe to Premium to remove all advertisements</li>
+                        </ul>
+
+                        <h3>10.3 No Other Third Parties</h3>
+                        <p>Apart from Apple services and Google AdMob, Cricket Counter does not integrate with any other third-party services, analytics platforms, or social media platforms.</p>
                     </div>
 
                     <div class="card">
@@ -299,10 +319,10 @@
                         <ul>
                             <li>✅ <strong>Minimal Data Collection:</strong> We only collect data necessary for app functionality</li>
                             <li>✅ <strong>Local Storage:</strong> Your cricket data stays on your devices and iCloud</li>
-                            <li>✅ <strong>No Third-Party Sharing:</strong> We don't sell or share your data with anyone</li>
+                            <li>✅ <strong>Limited Third-Party Integration:</strong> Only Apple services and Google AdMob (for free version ads)</li>
                             <li>✅ <strong>User Control:</strong> You have full control over your data at all times</li>
                             <li>✅ <strong>Secure Transmission:</strong> All data sync uses Apple's encrypted infrastructure</li>
-                            <li>✅ <strong>No Tracking:</strong> No advertising trackers or external analytics</li>
+                            <li>✅ <strong>Controlled Advertising:</strong> Ads only in free version, removable with Premium subscription</li>
                             <li>✅ <strong>Transparent Practices:</strong> This policy explains exactly what we do with your data</li>
                             <li>✅ <strong>Privacy by Design:</strong> Privacy protection is built into Cricket Counter's core design</li>
                         </ul>
